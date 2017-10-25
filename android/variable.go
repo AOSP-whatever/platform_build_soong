@@ -90,6 +90,10 @@ type variableProperties struct {
 		Needs_text_relocations struct {
 			Cppflags []string
 		}
+
+		Uses_qcom_bsp_legacy struct {
+			Cflags []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -159,6 +163,7 @@ type productVariables struct {
 	BoardUsesQTIHardware *bool `json:",omitempty"`
 
 	Needs_text_relocations *bool `json:",omitempty"`
+	Uses_qcom_bsp_legacy *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
