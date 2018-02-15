@@ -91,6 +91,10 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
+		Target_shim_libs struct {
+			Cppflags []string
+		}
+
 		Uses_qcom_bsp_legacy struct {
 			Cflags []string
 		}
@@ -163,6 +167,7 @@ type productVariables struct {
 	BoardUsesQTIHardware *bool `json:",omitempty"`
 
 	Needs_text_relocations *bool `json:",omitempty"`
+	Target_shim_libs *string `json:",omitempty"`
 	Uses_qcom_bsp_legacy *bool `json:",omitempty"`
 }
 
