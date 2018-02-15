@@ -86,6 +86,11 @@ type variableProperties struct {
 			Cflags   []string
 			Cppflags []string
 		}
+
+		Target_shim_libs struct {
+			Cppflags []string
+		}
+
 	} `android:"arch_variant"`
 }
 
@@ -152,6 +157,8 @@ type productVariables struct {
 
 	Override_rs_driver *string `json:",omitempty"`
 	BoardUsesQTIHardware *bool `json:",omitempty"`
+
+	Target_shim_libs *string `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
