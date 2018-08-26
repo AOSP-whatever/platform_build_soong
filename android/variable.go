@@ -144,6 +144,10 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
+                Additional_gralloc_10_usage_bits struct {
+                        Cppflags []string
+                }
+
 	} `android:"arch_variant"`
 }
 
@@ -353,6 +357,7 @@ type productVariables struct {
 	Target_init_vendor_lib  *string `json:",omitempty"`
         Supports_extended_compress_format  *bool `json:",omitempty"`
 	Target_shim_libs *string `json:",omitempty"`
+        Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
