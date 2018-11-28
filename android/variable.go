@@ -141,6 +141,10 @@ type variableProperties struct {
 			Cppflags []string
 		}
 
+                Target_uses_color_metadata struct {
+                        Cppflags []string
+                }
+
 		Uses_qcom_bsp_legacy struct {
 			Cflags []string
 		}
@@ -267,6 +271,7 @@ type productVariables struct {
 	Has_legacy_camera_hal1 *bool `json:",omitempty"`
 	Needs_text_relocations *bool `json:",omitempty"`
 	Target_shim_libs *string `json:",omitempty"`
+        Target_uses_color_metadata  *bool `json:",omitempty"`
 	Uses_qcom_bsp_legacy *bool `json:",omitempty"`
 }
 
