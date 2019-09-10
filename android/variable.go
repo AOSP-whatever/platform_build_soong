@@ -124,6 +124,11 @@ type variableProperties struct {
 			Static_libs  []string
 			Srcs         []string
 		}
+
+		Target_init_vendor_lib struct {
+			Whole_static_libs []string
+		}
+
 	} `android:"arch_variant"`
 }
 
@@ -287,6 +292,8 @@ type productVariables struct {
 	ProductHiddenAPIStubsTest   []string `json:",omitempty"`
 
 	TargetFSConfigGen []string `json:",omitempty"`
+
+	Target_init_vendor_lib  *string `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
