@@ -159,6 +159,10 @@ type variableProperties struct {
 		Device_support_hwfde_perf struct {
 			Cflags []string
 		}
+
+		Target_init_vendor_lib struct {
+			Whole_static_libs []string
+                }
 	} `android:"arch_variant"`
 }
 
@@ -372,6 +376,8 @@ type productVariables struct {
 	InstallExtraFlattenedApexes *bool `json:",omitempty"`
 
 	BoardUsesRecoveryAsBoot *bool `json:",omitempty"`
+
+	Target_init_vendor_lib  *string `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
