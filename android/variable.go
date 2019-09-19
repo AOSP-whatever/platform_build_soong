@@ -131,6 +131,11 @@ type variableProperties struct {
 			Srcs         []string `android:"arch_variant"`
 			Exclude_srcs []string `android:"arch_variant"`
 		} `android:"arch_variant"`
+
+                Supports_extended_compress_format struct {
+                        Cflags []string
+                }
+
 	} `android:"arch_variant"`
 }
 
@@ -336,6 +341,8 @@ type productVariables struct {
 	InstallExtraFlattenedApexes *bool `json:",omitempty"`
 
 	BoardUsesRecoveryAsBoot *bool `json:",omitempty"`
+
+        Supports_extended_compress_format  *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
