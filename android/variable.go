@@ -136,6 +136,10 @@ type variableProperties struct {
 			Whole_static_libs []string
 		}
 
+                Supports_extended_compress_format struct {
+                        Cflags []string
+                }
+
 	} `android:"arch_variant"`
 }
 
@@ -343,6 +347,7 @@ type productVariables struct {
 	BoardUsesRecoveryAsBoot *bool `json:",omitempty"`
 
 	Target_init_vendor_lib  *string `json:",omitempty"`
+        Supports_extended_compress_format  *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
