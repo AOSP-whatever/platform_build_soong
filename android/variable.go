@@ -157,6 +157,10 @@ type variableProperties struct {
 			Whole_static_libs []string
 		}
 
+                Should_wait_for_qsee struct {
+                        Cflags []string
+                }
+
 	} `android:"arch_variant"`
 }
 
@@ -326,6 +330,7 @@ type productVariables struct {
 	TargetFSConfigGen []string `json:",omitempty"`
 
 	Target_init_vendor_lib  *string `json:",omitempty"`
+        Should_wait_for_qsee  *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
