@@ -152,6 +152,10 @@ type variableProperties struct {
                         Cflags []string
                 }
 
+                Has_memfd_backport struct {
+                        Cflags []string
+                }
+
 	} `android:"arch_variant"`
 }
 
@@ -363,6 +367,7 @@ type productVariables struct {
         Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
         Supports_extended_compress_format  *bool `json:",omitempty"`
         Disable_postrender_cleanup  *bool `json:",omitempty"`
+        Has_memfd_backport *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
