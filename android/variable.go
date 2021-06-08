@@ -159,6 +159,9 @@ type variableProperties struct {
 		Device_support_hwfde_perf struct {
 			Cflags []string
 		}
+                Additional_gralloc_10_usage_bits struct {
+                        Cppflags []string
+                }
 	} `android:"arch_variant"`
 }
 
@@ -355,6 +358,7 @@ type productVariables struct {
 	BoardVndkRuntimeDisable *bool `json:",omitempty"`
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
+        
 
 	Ndk_abis               *bool `json:",omitempty"`
 	Exclude_draft_ndk_apis *bool `json:",omitempty"`
@@ -392,6 +396,7 @@ type productVariables struct {
 	BoardUsesRecoveryAsBoot *bool `json:",omitempty"`
 
 	PrebuiltHiddenApiDir *string `json:",omitempty"`
+        Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
